@@ -1,20 +1,16 @@
-<!-- @using WebAppFramework.Models
-
-@model HomeModel
-
- -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>The Office Script Search</title>
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js"></script>
+    <script src="js/characterName.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="search-form">
       <h1>The Office Script Search</h1>
-      <form id="searchForm" method="post" action="/Home/SubmitForm">
-        <!-- @Html.AntiForgeryToken() -->
+      <form id="searchForm">
         <label for="searchInput">Enter a phrase:</label>
         <input type="text" id="searchInput" name="Text" value="pencil" required>
         <label for="dropdown">Select a name:</label>
@@ -61,7 +57,7 @@
           <option value="Josh">Josh</option>
           <option value="More Options...">More Options...</option>
         </select>
-        <button class="button" id="search" type="submit">Search</button>
+        <button class="button" id="search" type="submit" onclick="search">Search</button>
       </form>
     </div>
   </div>
@@ -69,7 +65,5 @@
   <footer>
     <p>&copy; Will Garvey Productions 2023</p>
   </footer>
-  <script src="js/index.js"></script>
-    <script src="js/characterName.js"></script>
 </body>
 </html>
